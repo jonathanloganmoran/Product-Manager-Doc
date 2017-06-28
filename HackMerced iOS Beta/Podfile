@@ -1,0 +1,30 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'HackMerced iOS Beta' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for HackMerced iOS Beta
+
+  target 'HackMerced iOS BetaTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'HackMerced iOS BetaUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+# pod "Yoga", :path => "../BetaRelease/HackMered React Beta/node_modules/react-native/ReactCommon/yoga"
+
+pod 'React', :path => '../BetaRelease/HackMerced React Beta/node_modules/react-native', :subspecs => [
+    'Core',
+    'RCTText',
+    'RCTNetwork',
+    'RCTWebSocket', # needed for debugging
+    # Add any other subspecs you want to use in your project
+  ]
+
+end
